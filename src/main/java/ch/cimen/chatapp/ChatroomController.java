@@ -5,14 +5,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
-import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
 
 @Controller
 public class ChatroomController {
 
     private final Logger logger = LoggerFactory.getLogger(ChatroomController.class);
-    private SimpMessagingTemplate template;
 
     @MessageMapping("/send/{room}")
     @SendTo("/topic/{room}")
