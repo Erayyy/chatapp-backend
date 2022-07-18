@@ -15,10 +15,10 @@ public class ChatroomController {
     @MessageMapping("/send/{room}")
     @SendTo("/topic/{room}")
     public Message send(@DestinationVariable String room, Message message) {
-        logger.info(message.getName() + ": " + message.getMessage());
-        logger.info("Sent to "+room);
-        if (message.getMessage() == null || message.getMessage().equals("")) return null;
         if (message.getName() == null || message.getName().equals("")) return null;
+        if (message.getMessage() == null || message.getMessage().equals(""))
+                if (message.getImage64() == null) return null;
+
         return message;
     }
 }
