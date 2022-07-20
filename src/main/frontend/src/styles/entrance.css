@@ -1,0 +1,68 @@
+.scale-in-center {
+  position: fixed;
+  z-index: 10;   
+  margin: 1rem;
+  padding: 1rem;
+  font-size: medium;
+
+  left: 50%;
+  top: 10%;
+
+  background-color: #495370;
+  color: #fff;
+  
+  -webkit-animation: scale-in-center 0.5s ease-in-out both;
+  animation: scale-in-center 0.5s ease-in-out both;
+
+  border-radius: 1.5%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.shove {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.cookie-list-element {
+  width: 100%;
+  border-width: 1px;
+  border-color: rgb(143, 143, 143);
+  border-style: solid;
+  border-radius: 1%;
+  padding: 0.5em;
+}
+
+.explanation-text {
+  color: white;
+  font-size: smaller;
+}
+
+ @-webkit-keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
